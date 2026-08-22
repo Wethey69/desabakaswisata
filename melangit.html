@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Desa Bakas | Melangit</title>
+	<style>
+		:root { --green:#046439; --dark:#fafafa; --light:#f4faf6; --gold:#e8b84b; --text:#26352d; }
+		* { box-sizing:border-box; margin:0; padding:0; }
+		body { font-family:Arial, sans-serif; color:var(--text); line-height:1.6; background:#fff; }
+		a { color:inherit; text-decoration:none; }
+		.container { width:min(1120px, 92%); margin:auto; }
+		header { background:var(--dark); color:#6b0000; position:sticky; top:0; z-index:10; box-shadow:0 2px 10px #0002; }
+		.nav { height:72px; display:flex; align-items:center; justify-content:space-between; }
+		.brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.1rem; }
+		.logo { background:var(--gold); color:var(--dark); border-radius:50%; width:42px; height:42px; display:grid; place-items:center; font-size:1.4rem; }
+		nav { display:flex; gap:24px; align-items:center; }
+		nav a { font-size:.95rem; opacity:.9; } nav a:hover { color:var(--gold); }
+		.menu { display:none; background:none; border:0; color:#ff6464; font-size:1.7rem; }
+		.hero { min-height: 750px; display:grid; place-items:center; text-align:left; color:#fff;  background:linear-gradient(#0b3e2bb8,#0b3e2bd9), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover; }
+		.btn { display:inline-block; margin-top:26px; padding:12px 22px; border-radius:8px; background:var(--gold); color:var(--white); font-weight:bold; border:0; cursor:pointer; }
+        .tnn .img { display:inline-flex; width: 12cm; height:12cm; object-fit:cover; border-radius:12px; margin-bottom:25px; }
+		.btt { display:inline-block; margin-top:3px; padding:5px 10px; border-radius:3px; background:var(--gold); color:var(--dark); font-weight:bold; border:0; cursor:pointer; }
+        .card img { 
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+            /* Smooth transition animation */
+            transition: transform 0.5s ease; 
+        }
+
+        .card img:hover {
+            /* Scales the image to 1.5 times its original size */
+            transform: scale(1.2); 
+            /* Ensures the expanded image stays on top of other elements */
+            position: relative;
+            z-index: 10; 
+        }
+        section { padding:74px 0; } .title { text-align:center; margin-bottom:38px; } .title h2 { color:var(--white); font-size:2rem; } .title p { color:#030303; }
+		.about { display:grid; grid-template-columns:1fr 1fr; gap:45px; align-items:center; } .about img { width:100%; border-radius:16px; height:310px; object-fit:center; }
+		.cards { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; } .card { background:#fff; border:1px solid #e2ebe5; border-radius:12px; padding:25px; box-shadow:0 5px 16px #164b2610; }
+		.card .icon { font-size:2rem; margin-bottom:10px; justify-content: center; } .card h3 { color:var(--green); margin-bottom:7px; }
+		#layanan { background:var(--light); } .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin-top:35px; text-align:center; } .stat { padding:20px; background:var(--green); color:#fff; border-radius:10px; } .stat strong { display:block; font-size:2rem; color:var(--gold); }
+		.news { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; } .news article { border-radius:10px; overflow:hidden; border:1px solid #e6eee8; } .news img { width:100%; height:160px; object-fit:cover; } .news div { padding:18px; } .news h3 { color:var(--green); margin-bottom:7px; }
+		.contact { background:var(--dark); color:#fff; } .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:35px; } .contact h2 { color:var(--gold); margin-bottom:15px; } form { display:grid; gap:12px; } input, textarea { width:100%; padding:12px; border:0; border-radius:6px; font:inherit; } textarea { min-height:100px; resize:vertical; }
+		footer { background:#0b281d; color:#b8c9bf; text-align:center; padding:20px; font-size:.9rem; }
+		@media(max-width:700px) { nav { display:none; position:absolute; top:72px; left: 0px;; width:100%; background:var(--dark); padding:18px; flex-direction:column; } nav.open { display:flex; } .menu { display:block; } .about,.contact-grid { grid-template-columns:1fr; } .cards,.news { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } section { padding:55px 0; } }
+	</style>
+</head>
+    <body>
+        <header>
+            <div class="container nav">
+                <a class="brand" href="index.html"><span class="logo">🌾</span>
+                <span>Desa Melangit</span></a>
+                <button class="menu" aria-label="Buka menu">☰</button>
+                <a class="btt" href="#Atraksi">Atraksi</a>
+                <a class="btt" href="#Makanan">Makanan</a>
+                <a class="btt" href="#Penginapan">Penginapan</a>
+         </header>
+         <main>
+            <section id="beranda" class="hero">
+                <div style="position: absolute; bottom: 120px; left: 45px; font-size: 30px; font-family: Helvetica Neue;"><h1>SELAMAT DATANG DI MELANGIT</h1><p style="font-size: 35px; font-family: Helvetica Neue;">Desa Bakas</p></div>
+            </section>
+            <section id="Atraksi">
+                <div class="container"><div class="title"><h2>Atraksi</h2><p>Destinasi Wisata di Desa Bakas</p></div>
+                <div class="cards" style="display:flex; justify-content:center; gap:10px;"> 
+                <div class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Melangit"><h3>Melangit</h3><p>harga</p></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Melangit"><h3>Melangit</h3><p>harga</p></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Melangit"><h3>Melangit</h3><p>harga</p></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Melangit"><h3>Melangit</h3><p>harga</p></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Melangit"><h3>Melangit</h3><p>harga</p></div>
+                </div>
+            </section>
+            <section id="Makanan">
+                <div class="container"><div class="title"><h2>Makanan</h2><p>Lezat dan Segar</p></div>
+                <div class="cards">
+                    <div class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Nasi Goreng"><h3>Nasi Goreng</h3><p>harga</p></div></div>
+            </section>
+            <section id="Penginapan">
+                <div class="container"><div class="title"><h2>Penginapan</h2><p>Tempat Tidur Nyaman</p></div>
+                <div class="cards">
+                    <div class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Guest House"><h3>Guest House</h3><p>harga</p></div></div>
+            </section> 
+            <section id="Alamat">
+                <div class="container">
+                    <div class="title">
+                            <h1>Lokasi Wisata Kami</h1>
+    <!-- Paste your copied Google Maps iframe here -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4613.628522795655!2d115.36313840000001!3d-8.5254361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd217fddc2a8f15%3A0x51221a722205863c!2sMelangit%20Bali!5e1!3m2!1sid!2sid!4v1787409347790!5m2!1sid!2sid" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+            </section>
+         </main>
+    </body>
+    <footer><p>© 2023 Desa Melangit. All rights reserved.</p></footer> 
